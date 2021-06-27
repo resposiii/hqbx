@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pxy.dao.HqbxMapper">
+
+    <insert id="addBxxx" parameterType="com.pxy.pojo.Bxxx">
+       INSERT INTO `hqbx`.`bxxx` (`bxsj`, `qs`, `bxr`, `lxfs`, `bxnr`, `sjwxhycqk`, `zt`, `thyy`, `wxry`, `bz`)
+       VALUES (#{bxsj},#{qs},#{bxr},#{lxfs},#{bxnr},#{sjwxhycqk},'待处理',#{thyy},#{wxry},#{bz});
+
+   </insert>
+
+    <delete id="deleteBxxxById" parameterType="com.pxy.pojo.Bxxx">
+        DELETE FROM `hqbx`.`bxxx` WHERE (`dh` = #{dh});
+    </delete>
+
+    <update id="updateBxxx" parameterType="com.pxy.pojo.Bxxx">
+        UPDATE `hqbx`.`bxxx`
+        SET `bxsj` = #{bxsj}, `qs` = #{qs}, `bxr` = #{bxr}, `lxfs` = #{lxfs}, `bxnr` = #{bxnr}, `sjwxhycqk` = #{sjwxhycqk}, `zt` = #{zt}, `thyy` = #{thyy}, `wxry` = #{wxry}, `bz` = #{bz}
+        WHERE (`dh` = #{dh});
+    </update>
+
+
+    <select id="queryBxxxById" resultType="com.pxy.pojo.Bxxx">
+        select * from `hqbx`.`bxxx`
+        where (`dh` = #{dh});
+    </select>
+
+    <select id="queryAllBxxx" resultType="com.pxy.pojo.Bxxx">
+        select * from bxxx;
+    </select>
+
+</mapper>
