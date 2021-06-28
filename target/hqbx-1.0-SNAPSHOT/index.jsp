@@ -24,7 +24,7 @@
     <form method="post" action="a_login" class="form-signin" style="margin-left: 40%; margin-top: 10%;">
         <div class="row">
             <div class="form-group col-lg-4 input-group input-group-lg">
-                <h3 class="form-signin-heading">登录考试</h3>
+                <h3 class="form-signin-heading">登录</h3>
             </div>
         </div>
 
